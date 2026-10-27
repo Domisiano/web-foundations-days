@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Day 5 Web Foundations assignment: load and filter users from a REST API.">
+    <title>Day 5 — User Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="users.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <p class="eyebrow">WEB FOUNDATIONS · DAY 5</p>
+        <h1>User Directory</h1>
+        <p class="intro">Load people from a practice API, then search the results without making another request.</p>
+    </header>
+
+    <main class="container">
+        <section class="toolbar" aria-labelledby="directory-heading">
+            <div>
+                <h2 id="directory-heading">Directory</h2>
+                <p class="muted">Names, email addresses, cities and companies</p>
+            </div>
+            <button id="load-users" type="button">Load users</button>
+        </section>
+
+        <div class="filter">
+            <label for="filter-input">Filter by name</label>
+            <input
+                id="filter-input"
+                type="search"
+                placeholder="Start typing a name…"
+                autocomplete="off"
+                aria-describedby="filter-help"
+            >
+            <p id="filter-help" class="muted">Filtering is case-insensitive and uses the users already loaded.</p>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <ul id="users-list" class="users-list" aria-label="Users"></ul>
+    </main>
+
+    <footer>
+        <p>Day 5 practice · Client–server communication with fetch()</p>
+    </footer>
+</body>
+</html>
